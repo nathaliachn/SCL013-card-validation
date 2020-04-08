@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+ }
+
+body{
+    width: 100%;
+    height: 100%;
+    }
+
+#inicio { 
+    background: url(file:///home/laboratoria/Descargas/Yellow%20Teal%20Photo%20Graduation%20Events%20Website.png) center fixed; 
+    background-size: cover;
+    }
+
+ #agradecimiento{
+     color: #FFFFFF;
+     font-family: 'Fjalla One', sans-serif; 
+     text-align: center;
+     top: 130px;
+     position: relative;
+     left: 42px;
+     }
+
+ #button1{
+     width: 11%;
+     height: 50%;
+     color: #0bb2b5;
+     text-align: center;
+     border-radius: 20px;
+     top: 30px;
+     position: relative;
+     padding: 7px 40px;
+    
+    
+
+ }
+ 

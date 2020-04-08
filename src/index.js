@@ -1,3 +1,4 @@
-import validator from './validator.js';
-
-console.log(validator);
+function validador(){
+    let value = document.getElementById("numero_de_tarjeta").value;
+    
+}

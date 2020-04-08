@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Validar tarjeta de credito</title>
+</head>
+<body>
+
+    <form id="pedir_numero_de_tarjeta" name="pedir numero de tarjeta">
+        <p class="seleccion 1"><strong> Selecciona tu tipo de tarjeta</strong> </p>
+        <input type="radio" id="t1" name="selecion 1" value="Master Card"> Master Card<br>
+      <input type="radio" id="t2" name="selecion 1" value="Visa"> Visa<br>
+      <input type="radio" id="t3" name="selecion 1" value="American Express"> American Express<br>
+
+      <label for="">Ingresa tu numero de tarjeta</label>
+      <input type="text" onchange="validador()" id="numero_de_tarjeta">
+    </form>
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
