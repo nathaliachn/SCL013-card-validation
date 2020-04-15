@@ -5,6 +5,10 @@
 * [1. Resumen](#1-resumen)
 * [2. Imagen final del proyeto](#2-imagen-final-del-proyecto)
 * [3. Investigación UX](#3-investigacion-ux)
+* [3. Planificacion](#3-planificacion)
+
+
+
 
 ***
 
@@ -14,9 +18,9 @@ Nuestro proyecto se basa en crear un validador de tarjeta de credito, usando el 
 
 ## 2. Imagen final del proyeto
 
-file:///home/laboratoria/Escritorio/SCL013-card-validation/img/image-final-html1.png
-file:///home/laboratoria/Escritorio/SCL013-card-validation/img/imagen-final-html2.png
-file:///home/laboratoria/Escritorio/SCL013-card-validation/img/imagen-final-html3.png
+https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/image-final-html1.png
+https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/imagen-final-html2.png
+https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/imagen-final-html3.png
 
 
 ## 3. Investigación UX
