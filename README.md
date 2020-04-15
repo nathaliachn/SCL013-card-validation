@@ -56,6 +56,6 @@ https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/Scketch-ho
    
    -Hicimos nuestra organizacion y planificacion en el trello
    
-    https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/trello1.png
-    https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/trello2.png
+   https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/trello1.png
+   https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/trello2.png
    
