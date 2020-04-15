@@ -4,20 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <title>Validar tarjeta de credito</title>
+    <link rel="icon" type="image/png" href="../img/logocerveceria.png" />
+    <title>Validar tarjeta</title>
 </head>
-<body>
-
-    <form id="pedir_numero_de_tarjeta" name="pedir numero de tarjeta">
-        <p class="seleccion 1"><strong> Selecciona tu tipo de tarjeta</strong> </p>
-        <input type="radio" id="t1" name="selecion 1" value="Master Card"> Master Card<br>
-      <input type="radio" id="t2" name="selecion 1" value="Visa"> Visa<br>
-      <input type="radio" id="t3" name="selecion 1" value="American Express"> American Express<br>
-
-      <label for="">Ingresa tu numero de tarjeta</label>
-      <input type="text" onchange="validador()" id="numero_de_tarjeta">
+<body id="paginaValidar">
+    <img src="../img/logocerveceria.png" id="logo2"/></img>
+    <!-- Creamos el formulario para validar tarjeta de credito  -->
+    <form id="tdc" name="tdc">
+<br>
+<br>
+         <!-- Creamos boton tipo select para la elección de la tarjeta  -->
+        <label><strong>Seleccione tipo de tarjeta</strong></label>
+         <select name="tt" id="tt">
+             <br>
+             <br>
+             <option value="Visa">Visa</option>
+             <option value="mc">Master Card</option>
+             <option value="ae">American Express</option>
+         </select>
+        <br>
+        <br>
+         <!-- Creamos boton para selecionr el país  -->
+        <label><strong>Seleccione el país</strong></label>
+         <select id="país" name="país">
+             <option value="chile">Chile</option>
+             <option value="peru">Peru</option>
+             <option value="bolivia">Bolivia</option>
+             <option value="argentina">Argentina</option>
+             <option value="brazil">Brazil</option>
+             <option value="paraguay">Paraguay</option>
+             <option value="uruguay">Uruguay</option>
+             <option value="venezuela">Venezuela</option>
+             <option value="colombia">Colombia</option>
+        </select>
+        <br>
+        <!-- Creamos boton para registrar el número de la tarjeta que luego se validara por el algoritmo de luhn  -->
+        <br>
+        <label for=""><strong>Ingresa tu número de tarjeta</strong></label>
+        <input type="text" onkeyup="maskify()" id="numberOfCard" maxlength="9">        
+        <br>
+        <br>
+        <br>
+        <!-- Creamos boton para selecionar la decha de expiración, mes y año  -->
+        <label><strong>Fecha de expiración</strong></label>
+            <select id="mes" name="mes">
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Junio">Junio</option>
+            <option value="Julio">Julio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Sep>Septiembre">Septiembre</option>
+            <option value="Octubre">Octubre</option>
+            <option value="Noviembre">Noviembre</option>
+            <option value="Diciembre">Diciembre</option>
+        </select>            <select id="año" name="año">
+                <option value="2022">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        <!-- Creamos boton para solicitar el código verificador  -->
+        <label for=""><strong>Ingresa código de verificación</strong></label>
+         <input type="text" onchange="codigoveri()" id="codigoveri">        <br>
+        <br>
+        <br>
+        <!-- Creamos boton para solicitar el nombre del titular  -->
+         <label for=""><strong>Nombre del titular</strong></label>
+         <input type="text" onchange="titular()" id="titular">        <br>
+        <br>
+        <br>
+        <!-- Creamos boton para solicitar el numero de identificación, más el tipo de documento y tipo país  -->
+        <label for=""><strong>Número de identificación</strong></label>
+         <input type="text" onchange="identificacion()" id="identificacion">
+         <select id="documento" name="tipodocumento">
+             <option value="Rut">Rut</option>
+             <option value="Pasaporte">Pasaporte</option>
+        </select>
+        <br>
+        <select id="tipopais" name="tipopais">
+             <option value="chile">Chile</option>
+             <option value="peru">Peru</option>
+             <option value="bolivia">Bolivia</option>
+             <option value="argentina">Argentina</option>
+             <option value="brazil">Brazil</option>
+             <option value="paraguay">Paraguay</option>
+             <option value="uruguay">Uruguay</option>
+             <option value="venezuela">Venezuela</option>
+             <option value="colombia">Colombia</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        <!-- Creamos boton solicitar la direción actual  -->
+         <label for=""><strong>Dirección actual</strong></label>
+         <input type="text" onchange="direccion()" id="direccion">
+        <br>
+        <br>
+        <br>
+        <!-- Creamos boton para solicitar ciudad  -->
+         <label for=""><strong>Ciudad</strong></label>
+         <input type="text" onchange="ciudad()" id="ciudad">
+        <br>
+        <br>
+        <br>
+        <!-- Creamos boton selecionar la cantidad de coutas  -->
+        <label><strong>¿En cuantas cuotas desea pagar?</strong></label>
+         <select id="cuotas" name="cuotas">
+           <option value="0cuotas">0 cuotas</option>
+            <option value="3cuotas">3 cuotas</option>
+            <option value="6coutas">6 cuotas</option>
+            <option value="8cuotas">8 cuotas</option>
+            <option value="12cuotas">12 cuotas</option>
+         </select>
+        <br>
+        <br>
+        <br>
+        <!-- Creamos botón enviar  -->            <button id="button2"
+              type= button onclick="Validar()"><strong>Validar Tarjeta y Aceptar Compra</strong></button>
+        <br>
+        <br>
+        <br>
+        <br>
     </form>
-    <script type="text/javascript" src="app.js"></script>
-
-</body>
+    <script type="text/javascript" src=validator.js></script></body>
 </html>
