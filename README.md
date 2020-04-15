@@ -54,7 +54,8 @@ https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/Scketch-ho
    
    ## 4. Planificacion
    
-    -Hicimos nuestra organizacion y planificacion en el trello
+   -Hicimos nuestra organizacion y planificacion en el trello
+   
     https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/trello1.png
     https://github.com/nathaliachn/SCL013-card-validation/blob/master/img/trello2.png
    
