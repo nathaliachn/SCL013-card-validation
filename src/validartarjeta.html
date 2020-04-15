@@ -41,7 +41,7 @@
         <!-- Creamos boton para registrar el número de la tarjeta que luego se validara por el algoritmo de luhn  -->
         <br>
         <label for=""><strong>Ingresa tu número de tarjeta</strong></label>
-        <input type="text" onkeyup="maskify()" id="numberOfCard" maxlength="9">        
+        <input type="text" onchange="isValidCard()" id="numberOfCard" maxlength="9">        
         <br>
         <br>
         <br>
@@ -72,7 +72,8 @@
         <br>
         <!-- Creamos boton para solicitar el código verificador  -->
         <label for=""><strong>Ingresa código de verificación</strong></label>
-         <input type="text" onchange="codigoveri()" id="codigoveri">        <br>
+         <input type="text" onchange="codigoVeri()" id="codigoVeri" maxlength="4">       
+        <br>
         <br>
         <br>
         <!-- Creamos boton para solicitar el nombre del titular  -->
@@ -127,11 +128,13 @@
         <br>
         <br>
         <!-- Creamos botón enviar  -->            <button id="button2"
-              type= button onclick="Validar()"><strong>Validar Tarjeta y Aceptar Compra</strong></button>
+              type= button onclick="isValidCard()"><strong>Validar Tarjeta y Aceptar Compra</strong>
+            </button>
         <br>
         <br>
         <br>
         <br>
     </form>
     <script type="text/javascript" src=validator.js></script></body>
+
 </html>
